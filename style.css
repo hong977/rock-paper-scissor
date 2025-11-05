@@ -1,0 +1,19 @@
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#mainTitle {
+    color: white;
+    background-color: black;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+}
+
+
+
+.displayBoard {
+    align-self: flex-start;
+}
