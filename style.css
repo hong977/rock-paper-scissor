@@ -1,7 +1,7 @@
 body {
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 .choicesContainer {
-    width: 50vw;
+    width: 40vw;
 
     display: flex;
     gap: 1em;
@@ -51,4 +51,8 @@ body {
 
 .displayBoard {
     align-self: flex-start;
+}
+
+.displayBoard {
+    font-size: 1.5em;
 }

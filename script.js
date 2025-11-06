@@ -18,6 +18,10 @@ let computerScoreDisplay = document.createElement("span");
 computerScoreDisplay.textContent = computerScore;
 displayComputerScore.appendChild(computerScoreDisplay);
 
+const roundResult = document.createElement("p");
+document.body.appendChild(roundResult);
+roundResult.style.fontSize= "1.5em";
+
 function getComputerChoice(){
     let choice =Math.random();
     if (choice < 1/3){
@@ -73,17 +77,17 @@ function playRound(humanChoice){
     if (winner == "Human"){
         humanScore++;
         myScoreDisplay.textContent = humanScore;
-        console.log("win");
+        roundResult.textContent = `${humanChoice} beats ${computerChoice}.\nYou are the winner for this round.`;
         checkWinner(winner);
     }
     else if (winner == "Computer"){
         computerScore++;
         computerScoreDisplay.textContent = computerScore;
-        console.log("lose");
+        roundResult.textContent = `${computerChoice} beats ${humanChoice}. \nComputer won this round.`;
         checkWinner(winner);
     }
     else {
-        console.log("tie");
+        roundResult.textContent = "Its a tie this round.";
     }
 }
 
@@ -94,5 +98,6 @@ function checkWinner(winner){
         myScoreDisplay.textContent = humanScore;
         computerScore = 0;
         computerScoreDisplay.textContent = computerScore;
+        roundResult.textContent = "";
     }
 }
